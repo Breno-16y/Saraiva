@@ -1,0 +1,119 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Splash Screen */
+#splash {
+  position: fixed;
+  inset: 0;
+  background-color: #2e8b57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  z-index: 9999;
+  animation: fadeOut 3s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+header {
+  background-color: #2e8b57;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center;
+  background-size: cover;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.button {
+  background-color: white;
+  color: #2e8b57;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.categories {
+  padding: 2rem;
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 1rem;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
