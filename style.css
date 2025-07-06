@@ -27,12 +27,26 @@ body {
 }
 
 .splash-img {
-  width: 200px;
+  width: 260px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  margin-bottom: 1rem;
-  animation: zoomIn 1s ease-out;
+  border-radius: 20px;
+  border: 4px solid #4a0072;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+  animation: zoomIn 1.2s ease-out;
+  transition: transform 0.4s ease;
+}
+.splash-img:hover {
+  transform: scale(1.06);
+}
+
+.splash-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+  animation: fadeText 2s ease-in-out;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fadeOut {
@@ -53,6 +67,17 @@ body {
   }
 }
 
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Cabeçalho */
 header {
   background-color: #6a1b9a;
@@ -64,9 +89,21 @@ header {
   flex-wrap: wrap;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
 nav a {
   color: white;
-  margin-left: 1.5rem;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -76,7 +113,22 @@ nav a:hover {
   color: #ffc107;
 }
 
-/* Hero/Banner */
+nav .button {
+  background-color: #fff;
+  color: #6a1b9a;
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+nav .button:hover {
+  transform: scale(1.05);
+}
+
+/* Banner */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -84,7 +136,6 @@ nav a:hover {
   background-size: cover;
   color: white;
 }
-
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -94,39 +145,21 @@ nav a:hover {
   display: inline-block;
 }
 
-.button {
-  background-color: #fff;
-  color: #6a1b9a;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.button:hover {
-  transform: scale(1.05);
-}
-
 /* Categorias */
 .categories {
   padding: 3rem 2rem;
   text-align: center;
 }
-
 .categories h2 {
   margin-bottom: 2rem;
   color: #6a1b9a;
 }
-
 .category-list {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
 .category {
   background-color: white;
   padding: 1.5rem;
@@ -136,7 +169,6 @@ nav a:hover {
   font-weight: bold;
   transition: transform 0.3s, background-color 0.3s;
 }
-
 .category:hover {
   transform: scale(1.05);
   background-color: #f3e5f5;
@@ -151,7 +183,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* Responsividade geral */
+/* Responsividade */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -162,110 +194,40 @@ footer {
     margin-top: 0.5rem;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 0.5rem 0.5rem 0 0;
-  }
-
   .hero h1 {
     font-size: 1.8rem;
     padding: 0.8rem 1rem;
-  }
-
-  .button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  .category-list {
-    flex-direction: column;
-    align-items: center;
   }
 
   .category {
     width: 90%;
     max-width: 300px;
   }
+
+  nav {
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .splash-img {
+    width: 200px;
+  }
+
+  .splash-title {
+    font-size: 1.5rem;
+  }
+
   .hero h1 {
     font-size: 1.4rem;
-  }
-
-  .button {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .splash-img {
-    width: 150px;
   }
 
   .categories h2 {
     font-size: 1.3rem;
   }
-}
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-img {
-  width: 32px;
-  height: auto;
-}
-nav .button {
-  margin-left: 1.5rem;
-  font-size: 1rem;
-  padding: 0.4rem 1rem;
-}
-.splash-img {
-  width: 220px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-  animation: zoomIn 1.2s ease-out;
-  transition: transform 0.4s ease;
-}
-
-.splash-img:hover {
-  transform: scale(1.05);
-}
-
-.splash-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  margin-top: 1rem;
-  animation: fadeText 2s ease-in-out;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-
-@keyframes fadeText {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .button, nav .button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
-.splash-img {
-  width: 240px; /* aumentamos o tamanho da logo */
-  height: auto;
-  border-radius: 20px;
-  border: 4px solid #4a0072; /* borda roxo escuro */
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
-  animation: zoomIn 1.2s ease-out;
-  transition: transform 0.4s ease;
-}
-
-.splash-img:hover {
-  transform: scale(1.06);
-}
-
