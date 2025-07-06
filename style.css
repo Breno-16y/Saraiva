@@ -1,10 +1,12 @@
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #fdfdfd;
   color: #333;
 }
 
@@ -12,7 +14,7 @@ body {
 #splash {
   position: fixed;
   inset: 0;
-  background-color: #2e8b57;
+  background-color: #6a1b9a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,39 +23,60 @@ body {
   z-index: 9999;
   animation: fadeOut 3s forwards;
   animation-delay: 2s;
+  text-align: center;
 }
 
-@keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
-}
-
-.logo {
-  font-size: 3rem;
-  font-weight: bold;
+.splash-img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
   animation: zoomIn 1s ease-out;
 }
 
-@keyframes zoomIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Cabeçalho */
 header {
-  background-color: #2e8b57;
+  background-color: #6a1b9a;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: white;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #ffc107;
+}
+
+/* Hero/Banner */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -64,56 +87,66 @@ nav a {
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 10px;
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
 }
 
 .button {
-  background-color: white;
-  color: #2e8b57;
-  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #6a1b9a;
+  padding: 0.6rem 1.2rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
+.button:hover {
+  transform: scale(1.05);
+}
+
+/* Categorias */
 .categories {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
 .categories h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: #6a1b9a;
 }
 
 .category-list {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .category {
   background-color: white;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  padding: 1.5rem;
+  border: 2px solid #6a1b9a;
+  border-radius: 12px;
   width: 200px;
-  transition: transform 0.3s;
+  font-weight: bold;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .category:hover {
   transform: scale(1.05);
+  background-color: #f3e5f5;
 }
 
+/* Rodapé */
 footer {
-  background-color: #2e8b57;
+  background-color: #6a1b9a;
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
