@@ -222,3 +222,36 @@ nav .button {
   font-size: 1rem;
   padding: 0.4rem 1rem;
 }
+.splash-img {
+  width: 220px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  animation: zoomIn 1.2s ease-out;
+  transition: transform 0.4s ease;
+}
+
+.splash-img:hover {
+  transform: scale(1.05);
+}
+
+.splash-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+  animation: fadeText 2s ease-in-out;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
