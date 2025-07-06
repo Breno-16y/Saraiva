@@ -272,3 +272,19 @@ nav .button {
 .splash-img:hover {
   transform: scale(1.06);
 }
+
+nav .catalogo {
+  border: 2px solid white;
+  border-radius: 999px; /* totalmente arredondado */
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav .catalogo:hover {
+  color: #ffc107;         /* laranja ao passar o mouse */
+  border-color: #ffc107;  /* borda também laranja no hover */
+  background-color: transparent;
+}
