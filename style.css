@@ -353,7 +353,7 @@ header {
 }
 
 .logo-title span {
-  background: linear-gradient(135deg, #FFC107, #E53935); /* amarelo → vermelho */
+  background: linear-gradient(135deg, #4A0072, #E53935); /* roxo escuro → vermelho */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -363,4 +363,3 @@ header {
 .logo-title span:hover {
   transform: scale(1.2);
 }
-
