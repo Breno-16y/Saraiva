@@ -322,24 +322,24 @@ nav.menu {
 }
 
 .logo-title {
-  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-title .livraria {
+  font-size: 3rem;
+  color: #EE4266;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.logo-title span {
-  background: linear-gradient(135deg, #540D6E, #FFD23F, #EE4266);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-  display: inline-block;
-  transition: transform 0.3s ease;
   letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.logo-title span:hover {
-  transform: scale(1.1);
+.logo-title .saraiva {
+  font-size: 2.2rem;
+  color: #FFD23F;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
-
