@@ -321,45 +321,25 @@ nav.menu {
   margin: 0;
 }
 
-header {
-  background-color: #4A0072; /* Roxo escuro da logo */
-  color: white;
-  padding: 2rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo-img {
-  width: 90px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
 .logo-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  letter-spacing: 0.25rem;
-  display: flex;
-  gap: 0.2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .logo-title span {
-  background: linear-gradient(135deg, #4A0072, #E53935); /* roxo escuro → vermelho */
+  background: linear-gradient(135deg, #540D6E, #FFD23F, #EE4266);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  display: inline-block;
   transition: transform 0.3s ease;
+  letter-spacing: 2px;
 }
 
 .logo-title span:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
+
