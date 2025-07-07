@@ -299,10 +299,3 @@ nav .catalogo:hover {
   flex: 1;
 }
 
-nav.menu {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* espaço igual entre os links */
-  flex-wrap: wrap;
-  width: 100%;
-}
