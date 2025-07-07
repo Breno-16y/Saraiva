@@ -294,3 +294,7 @@ nav .catalogo:hover {
   border-color: #ffc107;  /* borda também laranja no hover */
   background-color: transparent;
 }
+
+.content {
+  flex: 1;
+}
