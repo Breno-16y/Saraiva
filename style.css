@@ -320,3 +320,24 @@ nav.menu {
   color: white;
   margin: 0;
 }
+
+.logo-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.logo-title span {
+  color: #fff;
+  background: linear-gradient(135deg, #ffc107, #ba68c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.logo-title span:hover {
+  transform: scale(1.3);
+}
