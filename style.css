@@ -1,12 +1,3 @@
-@font-face {
-  font-family: 'TT Drugs';
-  src: url('fonts/TTDrugs-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Sunday';
-  src: url('fonts/Sunday.ttf') format('truetype');
-}
 
 html, body {
   height: 100%;
@@ -331,6 +322,24 @@ nav.menu {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'TT Drugs';
+  src: url('fonts/TTDrugs-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sunday';
+  src: url('fonts/Sunday.ttf') format('truetype');
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+}
+
 .logo-title .livraria {
   font-family: 'TT Drugs', sans-serif;
   font-size: 3rem;
@@ -342,7 +351,7 @@ nav.menu {
 
 .logo-title .saraiva {
   font-family: 'Sunday', cursive;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #FFD23F;
   font-weight: bold;
   letter-spacing: 1px;
