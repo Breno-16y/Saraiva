@@ -24,7 +24,7 @@
 
     header {
       width: 100%;
-      max-width: 900px;
+      max-width: 960px;
       margin-bottom: 30px;
     }
 
@@ -64,33 +64,32 @@
 
     main {
       width: 100%;
-      max-width: 900px;
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      padding: 10px 0;
     }
 
     h2 {
+      grid-column: 1 / -1;
       font-weight: 800;
       font-size: 2.2rem;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
       color: #6a1b9a;
       text-align: center;
       letter-spacing: 1px;
     }
 
-    .category-list {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
     .category {
+      background: #e1bee7;
+      border-radius: 14px;
+      aspect-ratio: 1 / 1; /* faz o card quadrado */
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 140px;
-      background: #e1bee7;
-      border-radius: 18px;
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       color: #4a148c;
       text-decoration: none;
       box-shadow: 0 6px 18px rgba(106, 27, 154, 0.25);
@@ -99,7 +98,7 @@
         box-shadow 0.3s ease,
         transform 0.2s ease;
       user-select: none;
-      padding: 0 20px;
+      padding: 15px;
       text-align: center;
     }
 
@@ -107,11 +106,12 @@
       background-color: #9c27b0;
       color: #fff;
       box-shadow: 0 10px 30px rgba(156, 39, 176, 0.6);
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     p.back-link {
-      margin-top: 35px;
+      grid-column: 1 / -1;
+      margin-top: 30px;
       width: 100%;
       text-align: center;
     }
@@ -136,10 +136,10 @@
     }
 
     /* Responsivo */
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       .category {
-        height: 120px;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 10px;
       }
     }
   </style>
@@ -160,18 +160,17 @@
 
   <main>
     <h2>📘 Livros de Autoajuda</h2>
-    <div class="category-list">
-      <a href="OPoderdoHábito.html" class="category">📘 O Poder do Hábito</a>
-      <a href="ComoFazerAmigoseInfluenciarPessoas.html" class="category">📘 Como Fazer Amigos e Influenciar Pessoas</a>
-      <a href="Os7HábitosdasPessoasAltamenteEficazes.html" class="category">📘 Os 7 Hábitos das Pessoas Altamente Eficazes</a>
-      <a href="ASutilArtedeLigaroF*da-se.html" class="category">📘 A Sutil Arte de Ligar o F*da-se</a>
-      <a href="QuemPensaEnriquece.html" class="category">📘 Quem Pensa Enriquece</a>
-      <a href="OMilagredaManhã.html" class="category">📘 O Milagre da Manhã</a>
-      <a href="SejaFoda!.html" class="category">📘 Seja Foda!</a>
-      <a href="OSegredo.html" class="category">📘 O Segredo</a>
-      <a href="mais-esperto-que-o-diabo.html" class="category">📘 Mais Esperto Que o Diabo</a>
-      <a href="desperte-o-seu-gigante.html" class="category">📘 Desperte o Seu Gigante Interior</a>
-    </div>
+    <a href="OPoderdoHábito.html" class="category">📘 O Poder do Hábito</a>
+    <a href="ComoFazerAmigoseInfluenciarPessoas.html" class="category">📘 Como Fazer Amigos e Influenciar Pessoas</a>
+    <a href="Os7HábitosdasPessoasAltamenteEficazes.html" class="category">📘 Os 7 Hábitos das Pessoas Altamente Eficazes</a>
+    <a href="ASutilArtedeLigaroF*da-se.html" class="category">📘 A Sutil Arte de Ligar o F*da-se</a>
+    <a href="QuemPensaEnriquece.html" class="category">📘 Quem Pensa Enriquece</a>
+    <a href="OMilagredaManhã.html" class="category">📘 O Milagre da Manhã</a>
+    <a href="SejaFoda!.html" class="category">📘 Seja Foda!</a>
+    <a href="OSegredo.html" class="category">📘 O Segredo</a>
+    <a href="mais-esperto-que-o-diabo.html" class="category">📘 Mais Esperto Que o Diabo</a>
+    <a href="desperte-o-seu-gigante.html" class="category">📘 Desperte o Seu Gigante Interior</a>
+
     <p class="back-link"><a href="index.html">← Voltar ao Início</a></p>
   </main>
 
@@ -180,4 +179,3 @@
   </footer>
 </body>
 </html>
-
