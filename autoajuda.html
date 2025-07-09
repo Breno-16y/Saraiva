@@ -6,58 +6,157 @@
   <title>Categoria – Autoajuda</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #6a1b9a;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1rem 0;
+      font-weight: 600;
+    }
+
+    .header-content, .menu {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .logo-title {
+      display: none; /* ocultar para manter centralizado */
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #9c27b0;
+    }
+
+    main {
+      flex-grow: 1; /* para ocupar o espaço disponível entre header e footer */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .content-wrapper {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 25px rgba(106, 27, 154, 0.15);
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
     .category-list {
       display: flex;
       flex-direction: column;
-      gap: 12px; /* Espaço entre os links */
-      max-width: 400px; /* largura opcional */
+      gap: 15px;
     }
+
     .category {
       display: block;
-      background-color: #f4f4f4;
-      padding: 10px 15px;
-      border-radius: 6px;
-      color: #6a1b9a;
+      padding: 18px 25px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #e1bee7;
+      color: #4a148c;
       text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
+      box-shadow: 0 6px 12px rgba(106, 27, 154, 0.2);
+      transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+      user-select: none;
     }
+
     .category:hover {
-      background-color: #d1c4e9;
+      background-color: #9c27b0;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(156, 39, 176, 0.5);
+      transform: translateY(-4px);
+    }
+
+    p a {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 600;
+      color: #6a1b9a;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+      text-align: center;
+    }
+
+    p a:hover {
+      color: #9c27b0;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <div class="logo-title">
-        <span class="livraria">Livraria</span>
-        <span class="saraiva">Saraiva</span>
-      </div>
-      <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="autoajuda.html" class="catalogo">Autoajuda</a>
-        <a href="#">Contato</a>
-      </nav>
-    </div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="autoajuda.html" class="catalogo">Autoajuda</a>
+      <a href="#">Contato</a>
+    </nav>
   </header>
 
-  <main style="flex:1; padding:2rem;">
-    <h2 style="color:#6a1b9a; margin-bottom:1.5rem;">📘 Livros de Autoajuda</h2>
-    <div class="category-list">
-      <a href="OPoderdoHábito.html" class="category">📘 O Poder do Hábito</a>
-      <a href="ComoFazerAmigoseInfluenciarPessoas.html" class="category">📘 Como Fazer Amigos e Influenciar Pessoas</a>
-      <a href="Os7HábitosdasPessoasAltamenteEficazes.html" class="category">📘 Os 7 Hábitos das Pessoas Altamente Eficazes</a>
-      <a href="ASutilArtedeLigaroF*da-se.html" class="category">📘 A Sutil Arte de Ligar o F*da-se</a>
-      <a href="QuemPensaEnriquece.html" class="category">📘 Quem Pensa Enriquece</a>
-      <a href="OMilagredaManhã.html" class="category">📘 O Milagre da Manhã</a>
-      <a href="SejaFoda!.html" class="category">📘 Seja Foda!</a>
-      <a href="OSegredo.html" class="category">📘 O Segredo</a>
-      <a href="mais-esperto-que-o-diabo.html" class="category">📘 Mais Esperto Que o Diabo</a>
-      <a href="desperte-o-seu-gigante.html" class="category">📘 Desperte o Seu Gigante Interior</a>
+  <main>
+    <div class="content-wrapper">
+      <h2>📘 Livros de Autoajuda</h2>
+      <div class="category-list">
+        <a href="OPoderdoHábito.html" class="category">📘 O Poder do Hábito</a>
+        <a href="ComoFazerAmigoseInfluenciarPessoas.html" class="category">📘 Como Fazer Amigos e Influenciar Pessoas</a>
+        <a href="Os7HábitosdasPessoasAltamenteEficazes.html" class="category">📘 Os 7 Hábitos das Pessoas Altamente Eficazes</a>
+        <a href="ASutilArtedeLigaroF*da-se.html" class="category">📘 A Sutil Arte de Ligar o F*da-se</a>
+        <a href="QuemPensaEnriquece.html" class="category">📘 Quem Pensa Enriquece</a>
+        <a href="OMilagredaManhã.html" class="category">📘 O Milagre da Manhã</a>
+        <a href="SejaFoda!.html" class="category">📘 Seja Foda!</a>
+        <a href="OSegredo.html" class="category">📘 O Segredo</a>
+        <a href="mais-esperto-que-o-diabo.html" class="category">📘 Mais Esperto Que o Diabo</a>
+        <a href="desperte-o-seu-gigante.html" class="category">📘 Desperte o Seu Gigante Interior</a>
+      </div>
+      <p><a href="index.html">← Voltar ao Início</a></p>
     </div>
-    <p style="margin-top:2rem;"><a href="index.html" style="color:#6a1b9a; text-decoration:underline;">← Voltar ao Início</a></p>
   </main>
 
   <footer>
