@@ -187,6 +187,23 @@
         width: 90%;
       }
     }
+/* Responsividade da splash-img */
+.splash-img {
+  width: 100%;
+  max-width: 300px; /* define um limite razoável */
+  height: auto;
+  border-radius: 20px;
+  border: 4px solid #4a0072;
+  object-fit: contain;
+}
+
+/* Ajuste para contêiner no mobile */
+@media (max-width: 600px) {
+  .splash-img {
+    max-width: 80%;
+  }
+}
+
   </style>
 </head>
 <body>
