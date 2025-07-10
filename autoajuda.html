@@ -66,21 +66,24 @@
 
     .category-list {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
     }
 
     .category {
       background-color: #e1bee7;
-      padding: 20px;
+      padding: 15px 10px 25px;
       border-radius: 12px;
       text-align: center;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #4a148c;
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(106, 27, 154, 0.15);
       transition: background-color 0.3s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .category:hover {
@@ -91,11 +94,22 @@
 
     .livro-img {
       width: 100%;
-      max-width: 120px;
-      height: auto;
-      margin-bottom: 10px;
-      border-radius: 6px;
+      max-width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .category-text {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5px;
     }
 
     .back-link {
@@ -143,43 +157,43 @@
     <div class="category-list">
       <a href="OPoderdoHábito.html" class="category">
         <img src="https://m.media-amazon.com/images/I/81uDOz4qz8L.jpg" alt="O Poder do Hábito" class="livro-img">
-        O Poder do Hábito
+        <div class="category-text">O Poder do Hábito</div>
       </a>
       <a href="ComoFazerAmigoseInfluenciarPessoas.html" class="category">
         <img src="https://m.media-amazon.com/images/I/41Xvd+OPfQL.jpg" alt="Como Fazer Amigos e Influenciar Pessoas" class="livro-img">
-        Como Fazer Amigos e Influenciar Pessoas
+        <div class="category-text">Como Fazer Amigos e Influenciar Pessoas</div>
       </a>
       <a href="Os7HábitosdasPessoasAltamenteEficazes.html" class="category">
         <img src="https://m.media-amazon.com/images/I/61a3QbVtT6L.jpg" alt="Os 7 Hábitos das Pessoas Altamente Eficazes" class="livro-img">
-        Os 7 Hábitos das Pessoas Altamente Eficazes
+        <div class="category-text">Os 7 Hábitos das Pessoas Altamente Eficazes</div>
       </a>
       <a href="ASutilArtedeLigaroF*da-se.html" class="category">
         <img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg" alt="A Sutil Arte de Ligar o F*da-se" class="livro-img">
-        A Sutil Arte de Ligar o F*da-se
+        <div class="category-text">A Sutil Arte de Ligar o F*da-se</div>
       </a>
       <a href="QuemPensaEnriquece.html" class="category">
         <img src="https://m.media-amazon.com/images/I/61oFS1rXfkL.jpg" alt="Quem Pensa Enriquece" class="livro-img">
-        Quem Pensa Enriquece
+        <div class="category-text">Quem Pensa Enriquece</div>
       </a>
       <a href="OMilagredaManhã.html" class="category">
         <img src="https://m.media-amazon.com/images/I/61UXbZ9vhtL.jpg" alt="O Milagre da Manhã" class="livro-img">
-        O Milagre da Manhã
+        <div class="category-text">O Milagre da Manhã</div>
       </a>
       <a href="SejaFoda!.html" class="category">
         <img src="https://m.media-amazon.com/images/I/81WcnNQ-TBL.jpg" alt="Seja Foda!" class="livro-img">
-        Seja Foda!
+        <div class="category-text">Seja Foda!</div>
       </a>
       <a href="OSegredo.html" class="category">
         <img src="https://m.media-amazon.com/images/I/91k5lVwIFTL.jpg" alt="O Segredo" class="livro-img">
-        O Segredo
+        <div class="category-text">O Segredo</div>
       </a>
       <a href="mais-esperto-que-o-diabo.html" class="category">
         <img src="https://m.media-amazon.com/images/I/71dUY+e5NEL.jpg" alt="Mais Esperto Que o Diabo" class="livro-img">
-        Mais Esperto Que o Diabo
+        <div class="category-text">Mais Esperto Que o Diabo</div>
       </a>
       <a href="desperte-o-seu-gigante.html" class="category">
         <img src="https://m.media-amazon.com/images/I/61U3RLK5WGL.jpg" alt="Desperte o Seu Gigante Interior" class="livro-img">
-        Desperte o Seu Gigante Interior
+        <div class="category-text">Desperte o Seu Gigante Interior</div>
       </a>
     </div>
     <p class="back-link"><a href="index.html">← Voltar ao Início</a></p>
