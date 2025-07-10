@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Livros de Autoajuda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autoajuda - Saraiva</title>
   <style>
     * {
       margin: 0;
@@ -15,56 +15,173 @@
     body {
       background: linear-gradient(to right, #fce4ec, #f3e5f5);
       color: #4a148c;
-      padding: 2rem;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 0;
+    }
+
+    #splash {
+      position: fixed;
+      inset: 0;
+      background-color: #6a1b9a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      color: white;
+      animation: fadeOut 3s forwards;
+      animation-delay: 2s;
+      text-align: center;
+    }
+
+    .splash-img {
+      width: 220px;
+      height: auto;
+      border-radius: 20px;
+      border: 4px solid #4a0072;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+      animation: zoomIn 1.2s ease-out;
+      transition: transform 0.4s ease;
+    }
+
+    .splash-img:hover {
+      transform: scale(1.06);
+    }
+
+    .splash-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      animation: fadeText 2s ease-in-out;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeText {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-title {
+      text-align: center;
+      line-height: 1;
+    }
+
+    .logo-title .livraria {
+      font-family: 'TT Drugs', sans-serif;
+      font-size: 3rem;
+      color: #EE4266;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo-title .saraiva {
+      font-family: 'Sunday', cursive;
+      font-size: 2.3rem;
+      color: #FFD23F;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    nav.menu {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav.menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav.menu a:hover {
+      color: #ffc107;
+    }
+
+    nav .catalogo {
+      border: 2px solid white;
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav .catalogo:hover {
+      color: #ffc107;
+      border-color: #ffc107;
+    }
+
+    main {
+      width: 100%;
+      max-width: 960px;
+      padding: 2rem;
+      flex: 1;
     }
 
     h2 {
+      text-align: center;
       font-size: 2.5rem;
       margin-bottom: 2rem;
       color: #6a1b9a;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      text-align: center;
     }
 
     .category-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.2rem;
-      width: 100%;
-      max-width: 800px;
+      gap: 1rem;
     }
 
-    .category {
+    .category-list a {
       background-color: white;
       border: 2px solid #6a1b9a;
       padding: 1.2rem;
-      border-radius: 16px;
+      border-radius: 12px;
       font-weight: bold;
       font-size: 1.1rem;
-      color: #4a148c;
       text-align: center;
+      color: #4a148c;
       text-decoration: none;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(106, 27, 154, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    .category:hover {
+    .category-list a:hover {
       background-color: #f3e5f5;
-      color: #6a1b9a;
       transform: scale(1.03);
-      box-shadow: 0 6px 18px rgba(156, 39, 176, 0.3);
     }
 
     .back-link {
-      margin-top: 2rem;
       text-align: center;
+      margin-top: 2rem;
     }
 
     .back-link a {
@@ -79,10 +196,11 @@
     }
 
     footer {
-      margin-top: 3rem;
+      background-color: #6a1b9a;
+      color: white;
       text-align: center;
-      font-size: 0.9rem;
-      color: #6a1b9a;
+      padding: 1rem;
+      margin-top: 3rem;
     }
 
     @media (max-width: 600px) {
@@ -91,35 +209,55 @@
       }
 
       h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <h2>📘 Livros de Autoajuda</h2>
+<!-- Splash Screen -->
+<div id="splash">
+  <img src="" alt="Logo da Saraiva" class="splash-img">
+  <h1 class="splash-title">Histórias infinitas</h1>
+</div>
 
-  <div class="category-list">
-    <a href="OPoderdoHábito.html" class="category">📘 O Poder do Hábito</a>
-    <a href="ComoFazerAmigoseInfluenciarPessoas.html" class="category">📘 Como Fazer Amigos e Influenciar Pessoas</a>
-    <a href="Os7HábitosdasPessoasAltamenteEficazes.html" class="category">📘 Os 7 Hábitos das Pessoas Altamente Eficazes</a>
-    <a href="ASutilArtedeLigaroF*da-se.html" class="category">📘 A Sutil Arte de Ligar o F*da-se</a>
-    <a href="QuemPensaEnriquece.html" class="category">📘 Quem Pensa Enriquece</a>
-    <a href="OMilagredaManhã.html" class="category">📘 O Milagre da Manhã</a>
-    <a href="SejaFoda!.html" class="category">📘 Seja Foda!</a>
-    <a href="OSegredo.html" class="category">📘 O Segredo</a>
-    <a href="mais-esperto-que-o-diabo.html" class="category">📘 Mais Esperto Que o Diabo</a>
-    <a href="desperte-o-seu-gigante.html" class="category">📘 Desperte o Seu Gigante Interior</a>
+<header>
+  <div class="header-content">
+    <div class="logo-title">
+      <span class="livraria">Livraria</span>
+      <span class="saraiva">Saraiva</span>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="autoajuda.html" class="catalogo">Autoajuda</a>
+      <a href="#">Contato</a>
+    </nav>
   </div>
+</header>
 
+<main>
+  <h2>📘 Livros de Autoajuda</h2>
+  <div class="category-list">
+    <a href="OPoderdoHábito.html">📘 O Poder do Hábito</a>
+    <a href="ComoFazerAmigoseInfluenciarPessoas.html">📘 Como Fazer Amigos e Influenciar Pessoas</a>
+    <a href="Os7HábitosdasPessoasAltamenteEficazes.html">📘 Os 7 Hábitos das Pessoas Altamente Eficazes</a>
+    <a href="ASutilArtedeLigaroF*da-se.html">📘 A Sutil Arte de Ligar o F*da-se</a>
+    <a href="QuemPensaEnriquece.html">📘 Quem Pensa Enriquece</a>
+    <a href="OMilagredaManhã.html">📘 O Milagre da Manhã</a>
+    <a href="SejaFoda!.html">📘 Seja Foda!</a>
+    <a href="OSegredo.html">📘 O Segredo</a>
+    <a href="mais-esperto-que-o-diabo.html">📘 Mais Esperto Que o Diabo</a>
+    <a href="desperte-o-seu-gigante.html">📘 Desperte o Seu Gigante Interior</a>
+  </div>
   <div class="back-link">
     <p><a href="index.html">← Voltar ao Início</a></p>
   </div>
+</main>
 
-  <footer>
-    © 2025 Saraiva. Todos os direitos reservados.
-  </footer>
+<footer>
+  © 2025 Saraiva. Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
