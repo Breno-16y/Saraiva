@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categoria – Espiritualidade</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e8f5e9;
+      color: #1b5e20;
+      padding: 30px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 30px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .logo-title {
+      font-weight: 700;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .logo-title .livraria {
+      font-weight: 400;
+      color: #2e7d32;
+      margin-right: 6px;
+    }
+
+    .logo-title .saraiva {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #2e7d32;
+    }
+
+    main {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .category-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .category {
+      background-color: #c8e6c9;
+      padding: 15px 10px 25px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1b5e20;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(56, 142, 60, 0.15);
+      transition: background-color 0.3s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .category:hover {
+      background-color: #66bb6a;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .livro-img {
+      width: 100%;
+      max-width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .category-text {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5px;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      color: #2e7d32;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      color: #43a047;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #2e7d32;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .category-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-title">
+        <span class="livraria">Livraria</span>
+        <span class="saraiva">Saraiva</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>📖 Livros de Espiritualidade</h2>
+    <div class="category-list">
+      <a href="evangelho-segundo-espiritismo.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71MmhrGf0rL.jpg" alt="O Evangelho Segundo o Espiritismo" class="livro-img">
+        <div class="category-text">O Evangelho Segundo o Espiritismo</div>
+      </a>
+      <a href="nosso-lar.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71HQ6HnUIdL.jpg" alt="Nosso Lar" class="livro-img">
+        <div class="category-text">Nosso Lar</div>
+      </a>
+      <a href="o-livro-dos-espiritos.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71NznxCJkAL.jpg" alt="O Livro dos Espíritos" class="livro-img">
+        <div class="category-text">O Livro dos Espíritos</div>
+      </a>
+      <a href="o-monge-e-o-executivo.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81TnIsL+ywL.jpg" alt="O Monge e o Executivo" class="livro-img">
+        <div class="category-text">O Monge e o Executivo</div>
+      </a>
+      <a href="o-kybalion.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/61VWeMznKLL.jpg" alt="O Caibalion" class="livro-img">
+        <div class="category-text">O Caibalion</div>
+      </a>
+      <a href="de-volta-ao-lar.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81TVnXGy34L.jpg" alt="De Volta ao Lar" class="livro-img">
+        <div class="category-text">De Volta ao Lar</div>
+      </a>
+      <a href="cura-e-autocura.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/61ZaiXCSIsL.jpg" alt="Cura e Autocura" class="livro-img">
+        <div class="category-text">Cura e Autocura</div>
+      </a>
+      <a href="as-5-linguagens-do-amor.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71x-kwFZq6L.jpg" alt="As 5 Linguagens do Amor" class="livro-img">
+        <div class="category-text">As 5 Linguagens do Amor</div>
+      </a>
+      <a href="muitas-vidas-muitos-mestres.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71Sk6m3WstL.jpg" alt="Muitas Vidas, Muitos Mestres" class="livro-img">
+        <div class="category-text">Muitas Vidas, Muitos Mestres</div>
+      </a>
+      <a href="voce-pode-curar-sua-vida.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/91KPOvvGlJL.jpg" alt="Você Pode Curar Sua Vida" class="livro-img">
+        <div class="category-text">Você Pode Curar Sua Vida</div>
+      </a>
+    </div>
+    <p class="back-link"><a href="index.html">← Voltar ao Início</a></p>
+  </main>
+
+  <footer>
+    © 2025 Saraiva. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
