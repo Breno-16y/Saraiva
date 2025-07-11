@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categoria – Biografias</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f5;
+      color: #4e342e;
+      padding: 30px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 30px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .logo-title {
+      font-weight: 700;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .logo-title .livraria {
+      font-weight: 400;
+      color: #6d4c41;
+      margin-right: 6px;
+    }
+
+    .logo-title .saraiva {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #6d4c41;
+    }
+
+    main {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .category-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .category {
+      background-color: #d7ccc8;
+      padding: 15px 10px 25px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #4e342e;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(78, 52, 46, 0.15);
+      transition: background-color 0.3s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .category:hover {
+      background-color: #8d6e63;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .livro-img {
+      width: 100%;
+      max-width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .category-text {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5px;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      color: #4e342e;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      color: #5d4037;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #4e342e;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .category-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-title">
+        <span class="livraria">Livraria</span>
+        <span class="saraiva">Saraiva</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>📚 Biografias Inspiradoras</h2>
+    <div class="category-list">
+      <a href="steve-jobs.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71GRZZ8eDSL.jpg" alt="Steve Jobs" class="livro-img">
+        <div class="category-text">Steve Jobs</div>
+      </a>
+      <a href="elon-musk.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81LR3MvG8nL.jpg" alt="Elon Musk" class="livro-img">
+        <div class="category-text">Elon Musk</div>
+      </a>
+      <a href="mandela.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/91Z1ODa+vSL.jpg" alt="Mandela – Longo Caminho para a Liberdade" class="livro-img">
+        <div class="category-text">Mandela</div>
+      </a>
+      <a href="malala.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/91vRxqAArFL.jpg" alt="Eu Sou Malala" class="livro-img">
+        <div class="category-text">Eu Sou Malala</div>
+      </a>
+      <a href="anne-frank.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71vhHkzgcqL.jpg" alt="O Diário de Anne Frank" class="livro-img">
+        <div class="category-text">O Diário de Anne Frank</div>
+      </a>
+      <a href="barack-obama.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/91sFgTKVeML.jpg" alt="A Promised Land – Barack Obama" class="livro-img">
+        <div class="category-text">Barack Obama</div>
+      </a>
+      <a href="martin-luther-king.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71AhS+uUM-L.jpg" alt="Martin Luther King Jr." class="livro-img">
+        <div class="category-text">Martin Luther King Jr.</div>
+      </a>
+      <a href="rita-lee.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81FKx3aBz6L.jpg" alt="Rita Lee – Uma Autobiografia" class="livro-img">
+        <div class="category-text">Rita Lee</div>
+      </a>
+      <a href="garrincha.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81UoLBFChGL.jpg" alt="Garrincha – Estrela Solitária" class="livro-img">
+        <div class="category-text">Garrincha</div>
+      </a>
+      <a href="helen-keller.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81PK2mG1OPL.jpg" alt="Helen Keller" class="livro-img">
+        <div class="category-text">Helen Keller</div>
+      </a>
+    </div>
+    <p class="back-link"><a href="index.html">← Voltar ao Início</a></p>
+  </main>
+
+  <footer>
+    © 2025 Saraiva. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
 
