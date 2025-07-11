@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categoria – Desenvolvimento Pessoal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e3f2fd;
+      color: #0d47a1;
+      padding: 30px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 30px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .logo-title {
+      font-weight: 700;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: baseline;
+    }
+
+    .logo-title .livraria {
+      font-weight: 400;
+      color: #1976d2;
+      margin-right: 6px;
+    }
+
+    .logo-title .saraiva {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #1976d2;
+    }
+
+    main {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .category-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .category {
+      background-color: #bbdefb;
+      padding: 15px 10px 25px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0d47a1;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(13, 71, 161, 0.15);
+      transition: background-color 0.3s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .category:hover {
+      background-color: #42a5f5;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .livro-img {
+      width: 100%;
+      max-width: 140px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .category-text {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5px;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      color: #0d47a1;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      color: #1565c0;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #0d47a1;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .category-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-title">
+        <span class="livraria">Livraria</span>
+        <span class="saraiva">Saraiva</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>🚀 Livros de Desenvolvimento Pessoal</h2>
+    <div class="category-list">
+      <a href="poder-do-habito.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg" alt="O Poder do Hábito" class="livro-img">
+        <div class="category-text">O Poder do Hábito</div>
+      </a>
+      <a href="mindset.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71zpL3W5A0L.jpg" alt="Mindset: A Nova Psicologia do Sucesso" class="livro-img">
+        <div class="category-text">Mindset</div>
+      </a>
+      <a href="milagre-da-manha.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81wLBsY30rL.jpg" alt="O Milagre da Manhã" class="livro-img">
+        <div class="category-text">O Milagre da Manhã</div>
+      </a>
+      <a href="seja-foda.html" class="category">
+        <img src="https://books.google.com.br/books/publisher/content?id=2NBJDwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U0MnFsvzgfzC6A45BpPG863K_18-g&w=1280" alt="Seja Foda!" class="livro-img">
+        <div class="category-text">Seja Foda!</div>
+      </a>
+      <a href="7-habitos-pessoas-eficazes.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/811jUvTg4FL.jpg" alt="Os 7 Hábitos das Pessoas Altamente Eficazes" class="livro-img">
+        <div class="category-text">Os 7 Hábitos das Pessoas Altamente Eficazes</div>
+      </a>
+      <a href="atitude-mental-positiva.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/91aOFxbYzLL.jpg" alt="Atitude Mental Positiva" class="livro-img">
+        <div class="category-text">Atitude Mental Positiva</div>
+      </a>
+      <a href="trabalhe-4-horas.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71AmKW-suoL.jpg" alt="Trabalhe 4 Horas por Semana" class="livro-img">
+        <div class="category-text">Trabalhe 4 Horas por Semana</div>
+      </a>
+      <a href="foco.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/71oZ+K7fKGL.jpg" alt="Foco – Daniel Goleman" class="livro-img">
+        <div class="category-text">Foco</div>
+      </a>
+      <a href="o-segredo.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/81-D3KPrfSL.jpg" alt="O Segredo" class="livro-img">
+        <div class="category-text">O Segredo</div>
+      </a>
+      <a href="quem-pensa-enriquece.html" class="category">
+        <img src="https://m.media-amazon.com/images/I/819ZzDu7hnL._UF894,1000_QL80_.jpg" alt="Quem Pensa Enriquece" class="livro-img">
+        <div class="category-text">Quem Pensa Enriquece</div>
+      </a>
+    </div>
+    <p class="back-link"><a href="index.html">← Voltar ao Início</a></p>
+  </main>
+
+  <footer>
+    © 2025 Saraiva. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
 
