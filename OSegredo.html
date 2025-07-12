@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O Segredo – Livraria Saraiva</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3e5f5;
+      color: #4a148c;
+      padding: 20px;
+    }
+
+    .logo-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
+    }
+
+    .product-image {
+      flex: 1 1 320px;
+      text-align: center;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-details {
+      flex: 2 1 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      color: #4a148c;
+    }
+
+    .author {
+      color: #7b1fa2;
+      font-size: 1rem;
+    }
+
+    .price {
+      font-size: 1.6rem;
+      color: #b12704;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .buy-button,
+    .cart-button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button {
+      background-color: #ffd740;
+      color: #4a148c;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .buy-button:hover {
+      background-color: #ffca28;
+    }
+
+    .cart-button {
+      background-color: #e1bee7;
+      color: #4a148c;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cart-button:hover {
+      background-color: #ce93d8;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: underline;
+      color: #6a1b9a;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      color: #8e24aa;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6a1b9a;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product-details {
+        align-items: center;
+        text-align: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .buy-button,
+      .cart-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-title">Livraria Saraiva</div>
+
+  <div class="container">
+    <div class="product-image">
+      <img src="https://m.media-amazon.com/images/I/81-D3KPrfSL.jpg" alt="O Segredo - Capa do Livro">
+    </div>
+
+    <div class="product-details">
+      <h1>O Segredo</h1>
+      <p class="author">por <strong>Rhonda Byrne</strong></p>
+      <p class="price">R$ 39,90</p>
+
+      <p class="description">
+        <strong>O Segredo</strong> revela o poder da Lei da Atração para transformar sua vida. Através de ensinamentos práticos e inspiradores,
+        este livro mostra como pensamentos positivos e crenças podem atrair sucesso, saúde e felicidade.
+        Um guia essencial para quem deseja manifestar seus sonhos e viver com mais plenitude.
+      </p>
+
+      <div class="buttons">
+        <a href="#" class="buy-button">🛒 Comprar agora</a>
+        <a href="#" class="cart-button">➕ Adicionar ao carrinho</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">← Voltar ao Início</a>
+  </div>
+
+  <footer>
+    © 2025 Saraiva. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
