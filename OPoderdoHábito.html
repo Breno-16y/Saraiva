@@ -12,92 +12,86 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f3f4f6;
-      color: #1e293b;
-      padding: 30px 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      padding: 20px;
     }
 
     .container {
-      max-width: 960px;
-      width: 100%;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .logo-title {
-      font-size: 1.8rem;
-      color: #2563eb;
-      font-weight: bold;
-    }
-
-    main {
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
-      align-items: flex-start;
-      justify-content: center;
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .book-image {
-      flex: 1 1 260px;
+    .product-image {
+      flex: 1 1 320px;
       text-align: center;
     }
 
-    .book-image img {
+    .product-image img {
       max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      height: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background-color: #f6f6f6;
     }
 
-    .book-details {
-      flex: 2 1 320px;
+    .product-details {
+      flex: 2 1 600px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
     }
 
-    .book-title {
+    .logo-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #232f3e;
+      margin-bottom: 20px;
+    }
+
+    h1 {
       font-size: 1.8rem;
-      color: #111827;
+      color: #0f1111;
     }
 
-    .book-author {
+    .author {
+      color: #565959;
       font-size: 1rem;
-      color: #374151;
     }
 
-    .book-description {
+    .price {
+      font-size: 1.5rem;
+      color: #b12704;
+      margin-top: 10px;
+    }
+
+    .description {
       font-size: 1rem;
       line-height: 1.6;
-      color: #374151;
+      color: #0f1111;
     }
 
     .buy-button {
-      background-color: #2563eb;
-      color: #ffffff;
-      padding: 12px 24px;
+      background-color: #ffd814;
+      border: 1px solid #fcd200;
+      padding: 12px 18px;
       font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
+      font-weight: bold;
+      color: #0f1111;
       text-align: center;
-      max-width: fit-content;
+      cursor: pointer;
+      border-radius: 8px;
+      text-decoration: none;
+      width: fit-content;
+      transition: background 0.3s;
     }
 
     .buy-button:hover {
-      background-color: #1d4ed8;
+      background-color: #f7ca00;
     }
 
     .back-link {
@@ -107,49 +101,65 @@
 
     .back-link a {
       text-decoration: underline;
-      color: #2563eb;
-      font-weight: 600;
+      color: #007185;
     }
 
     .back-link a:hover {
-      color: #1e40af;
+      color: #c7511f;
     }
 
     footer {
       margin-top: 40px;
       text-align: center;
       font-size: 0.9rem;
-      color: #6b7280;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product-details {
+        align-items: center;
+        text-align: center;
+      }
+
+      .buy-button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
+
+  <div class="logo-title">Livraria Saraiva</div>
+
   <div class="container">
-    <header>
-      <div class="logo-title">Livraria Saraiva</div>
-    </header>
+    <div class="product-image">
+      <img src="https://livrariascuritiba.vteximg.com.br/arquivos/ids/2021469/LV316499.jpg?v=638548554258800000" alt="O Poder do Hábito - Capa do Livro">
+    </div>
 
-    <main>
-      <div class="book-image">
-        <img src="https://livrariascuritiba.vteximg.com.br/arquivos/ids/2021469/LV316499.jpg?v=638548554258800000" alt="Capa do livro O Poder do Hábito">
-      </div>
-      <div class="book-details">
-        <h1 class="book-title">O Poder do Hábito</h1>
-        <p class="book-author"><strong>Autor:</strong> Charles Duhigg</p>
-        <p class="book-description">
-          Neste best-seller, o premiado repórter do New York Times, Charles Duhigg, explora a ciência por trás da formação de hábitos e como eles podem ser transformados para mudar nossas vidas, negócios e sociedades.
-          <br><br>
-          Com histórias cativantes e pesquisa sólida, o autor mostra como entender os hábitos pode ajudar a alcançar o sucesso pessoal e profissional. Ideal para quem busca desenvolver disciplina, foco e mudança duradoura.
-        </p>
-        <a href="https://www.amazon.com.br/dp/8539004119" target="_blank" class="buy-button">Comprar Agora</a>
-      </div>
-    </main>
+    <div class="product-details">
+      <h1>O Poder do Hábito</h1>
+      <p class="author">por <strong>Charles Duhigg</strong></p>
+      <p class="price">R$ 44,90</p>
 
-    <p class="back-link"><a href="index.html">← Voltar ao Início</a></p>
+      <p class="description">
+        Descubra como os hábitos moldam nossa vida pessoal e profissional neste best-seller mundial. O autor, um premiado repórter do New York Times, explora a ciência por trás da criação e mudança de hábitos. Com uma narrativa envolvente e estudos reais, este livro vai transformar sua forma de pensar, agir e viver.
+      </p>
 
-    <footer>
-      © 2025 Saraiva. Todos os direitos reservados.
-    </footer>
+      <a href="https://www.amazon.com.br/dp/8539004119" target="_blank" class="buy-button">Adicionar ao Carrinho</a>
+    </div>
   </div>
+
+  <div class="back-link">
+    <a href="index.html">← Voltar ao Início</a>
+  </div>
+
+  <footer>
+    © 2025 Saraiva. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
