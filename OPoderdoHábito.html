@@ -12,10 +12,18 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #111;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3e5f5;
+      color: #4a148c;
       padding: 20px;
+    }
+
+    .logo-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .container {
@@ -24,6 +32,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
     }
 
     .product-image {
@@ -34,9 +46,9 @@
     .product-image img {
       max-width: 100%;
       height: auto;
-      border: 1px solid #ddd;
-      padding: 10px;
-      background-color: #f6f6f6;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .product-details {
@@ -46,52 +58,45 @@
       gap: 15px;
     }
 
-    .logo-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #232f3e;
-      margin-bottom: 20px;
-    }
-
     h1 {
-      font-size: 1.8rem;
-      color: #0f1111;
+      font-size: 1.9rem;
+      color: #4a148c;
     }
 
     .author {
-      color: #565959;
+      color: #7b1fa2;
       font-size: 1rem;
     }
 
     .price {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #b12704;
-      margin-top: 10px;
+      font-weight: bold;
     }
 
     .description {
       font-size: 1rem;
       line-height: 1.6;
-      color: #0f1111;
+      color: #333;
     }
 
     .buy-button {
-      background-color: #ffd814;
-      border: 1px solid #fcd200;
-      padding: 12px 18px;
+      background-color: #ffd740;
+      border: none;
+      padding: 12px 22px;
       font-size: 1rem;
       font-weight: bold;
-      color: #0f1111;
-      text-align: center;
+      color: #4a148c;
       cursor: pointer;
       border-radius: 8px;
       text-decoration: none;
       width: fit-content;
-      transition: background 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease;
     }
 
     .buy-button:hover {
-      background-color: #f7ca00;
+      background-color: #ffca28;
     }
 
     .back-link {
@@ -101,18 +106,19 @@
 
     .back-link a {
       text-decoration: underline;
-      color: #007185;
+      color: #6a1b9a;
+      font-weight: 600;
     }
 
     .back-link a:hover {
-      color: #c7511f;
+      color: #8e24aa;
     }
 
     footer {
       margin-top: 40px;
       text-align: center;
       font-size: 0.9rem;
-      color: #555;
+      color: #6a1b9a;
     }
 
     @media (max-width: 768px) {
@@ -128,6 +134,7 @@
 
       .buy-button {
         width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -147,10 +154,12 @@
       <p class="price">R$ 44,90</p>
 
       <p class="description">
-        Descubra como os hábitos moldam nossa vida pessoal e profissional neste best-seller mundial. O autor, um premiado repórter do New York Times, explora a ciência por trás da criação e mudança de hábitos. Com uma narrativa envolvente e estudos reais, este livro vai transformar sua forma de pensar, agir e viver.
+        Este best-seller internacional revela como os hábitos moldam cada aspecto da nossa vida — pessoal, profissional e social.
+        Com base em estudos científicos e histórias reais, o autor nos mostra como transformar rotinas prejudiciais em comportamentos de sucesso.
+        Ideal para quem busca mudança de vida e alta performance.
       </p>
 
-      <a href="https://www.amazon.com.br/dp/8539004119" target="_blank" class="buy-button">Adicionar ao Carrinho</a>
+      <a href="#" class="buy-button">🛒 Comprar agora</a>
     </div>
   </div>
 
