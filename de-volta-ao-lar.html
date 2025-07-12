@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>De Volta ao Lar – Livraria Saraiva</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e8f5e9;
+      color: #1b5e20;
+      padding: 20px;
+    }
+
+    .logo-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+    }
+
+    .product-image {
+      flex: 1 1 320px;
+      text-align: center;
+    }
+
+    .product-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-details {
+      flex: 2 1 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      color: #1b5e20;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      color: #1b5e20;
+    }
+
+    .author {
+      font-size: 1rem;
+      color: #388e3c;
+    }
+
+    .price {
+      font-size: 1.6rem;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .buy-button,
+    .cart-button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button {
+      background-color: #81c784;
+      color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .buy-button:hover {
+      background-color: #66bb6a;
+    }
+
+    .cart-button {
+      background-color: #c8e6c9;
+      color: #1b5e20;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cart-button:hover {
+      background-color: #a5d6a7;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: underline;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      color: #43a047;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #2e7d32;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product-details {
+        align-items: center;
+        text-align: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .buy-button,
+      .cart-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-title">Livraria Saraiva</div>
+
+  <div class="container">
+    <div class="product-image">
+      <img src="https://editoratelha.b-cdn.net/wp-content/uploads/2022/12/De-volta-para-casa_16x23_404p_8900.jpg" alt="De Volta ao Lar - Capa do Livro" />
+    </
