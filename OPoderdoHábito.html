@@ -80,23 +80,43 @@
       color: #333;
     }
 
-    .buy-button {
-      background-color: #ffd740;
-      border: none;
-      padding: 12px 22px;
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .buy-button,
+    .cart-button {
+      padding: 12px 20px;
       font-size: 1rem;
       font-weight: bold;
-      color: #4a148c;
-      cursor: pointer;
+      border: none;
       border-radius: 8px;
+      cursor: pointer;
       text-decoration: none;
-      width: fit-content;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
       transition: background-color 0.3s ease;
+    }
+
+    .buy-button {
+      background-color: #ffd740;
+      color: #4a148c;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
 
     .buy-button:hover {
       background-color: #ffca28;
+    }
+
+    .cart-button {
+      background-color: #e1bee7;
+      color: #4a148c;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cart-button:hover {
+      background-color: #ce93d8;
     }
 
     .back-link {
@@ -132,7 +152,13 @@
         text-align: center;
       }
 
-      .buy-button {
+      .buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .buy-button,
+      .cart-button {
         width: 100%;
         text-align: center;
       }
@@ -159,7 +185,10 @@
         Ideal para quem busca mudança de vida e alta performance.
       </p>
 
-      <a href="#" class="buy-button">🛒 Comprar agora</a>
+      <div class="buttons">
+        <a href="#" class="buy-button">🛒 Comprar agora</a>
+        <a href="#" class="cart-button">➕ Adicionar ao carrinho</a>
+      </div>
     </div>
   </div>
 
