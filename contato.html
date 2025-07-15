@@ -13,39 +13,39 @@
       color: #4a148c;
     }
 
-   header {
-  background-color: #6a1b9a;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
+    header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.logo-title {
-  text-align: center;
-  line-height: 1;
-}
+    .logo-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
 
-.logo-title .livraria {
-  font-family: 'TT Drugs', sans-serif;
-  font-size: 3rem;   /* mesmo do index */
-  color: #EE4266;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-}
+    .logo-title .livraria {
+      font-family: 'TT Drugs', sans-serif;
+      font-size: 3rem;
+      color: #EE4266;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
 
-.logo-title .saraiva {
-  font-family: 'Sunday', cursive;
-  font-size: 2.3rem;  /* mesmo do index */
-  color: #FFD23F;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-}
-
+    .logo-title .saraiva {
+      font-family: 'Sunday', cursive;
+      font-size: 2.3rem;
+      color: #FFD23F;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
     }
 
     nav.menu {
@@ -76,6 +76,10 @@
     nav.menu .catalogo:hover {
       border-color: #ffc107;
       color: #ffc107;
+    }
+
+    nav.menu a:first-child {
+      margin-right: 2rem;
     }
 
     .contact-container {
@@ -135,8 +139,8 @@
 
 <header>
   <div class="logo-title">
-    <span class="livraria">Livraria</span>
-    <span class="saraiva">Saraiva</span>
+    <div class="livraria">Livraria</div>
+    <div class="saraiva">Saraiva</div>
   </div>
   <nav class="menu">
     <a href="index.html">Voltar</a>
@@ -172,4 +176,3 @@
 
 </body>
 </html>
-
