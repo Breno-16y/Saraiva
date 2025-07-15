@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato – Saraiva</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fce4ec, #f3e5f5);
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #4a148c;
+    }
 
+    header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .logo-title .livraria { font-family:'TT Drugs'; font-size:3rem; color:#EE4266; }
+    .logo-title .saraiva   { font-family:'Sunday'; font-size:2.3rem; color:#FFD23F; }
+
+    nav.menu {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    nav.menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color .3s;
+    }
+    nav.menu a:hover { color: #ffc107; }
+    nav.menu .catalogo {
+      border: 2px solid white;
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+    }
+    nav.menu .catalogo:hover { border-color: #ffc107; color: #ffc107; }
+
+    .contact-container {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(109,76,65,0.2);
+    }
+
+    .contact-container h1 {
+      color: #6a1b9a;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+      line-height: 2;
+      color: #4a148c;
+    }
+
+    .contact-info strong {
+      color: #6a1b9a;
+    }
+
+    footer {
+      background-color: #6a1b9a;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      nav.menu {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <span class="livraria">Livraria</span>
+    <span class="saraiva">Saraiva</span>
+  </div>
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="catalogo.html" class="catalogo">Catálogo</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <div class="contact-container">
+    <h1>Entre em Contato</h1>
+    <div class="contact-info">
+      <p><strong>Endereço:</strong> Rua das Letras, 123 – Centro, São Paulo – SP</p>
+      <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+      <p><strong>E-mail:</strong> atendimento@saraivalivraria.com.br</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 Saraiva. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
