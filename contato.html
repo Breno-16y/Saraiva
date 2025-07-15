@@ -44,13 +44,14 @@
     nav.menu .catalogo:hover { border-color: #ffc107; color: #ffc107; }
 
     .contact-container {
-      max-width: 700px;
+      max-width: 800px;
       margin: 3rem auto;
       background: white;
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 4px 12px rgba(109,76,65,0.2);
     }
+
     .contact-container h1 {
       color: #6a1b9a;
       margin-bottom: 1.5rem;
@@ -64,6 +65,14 @@
     }
     .contact-info strong {
       color: #6a1b9a;
+    }
+
+    .mapa {
+      width: 100%;
+      height: 400px;
+      margin-top: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     footer {
@@ -93,8 +102,7 @@
     <span class="saraiva">Saraiva</span>
   </div>
   <nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="catalogo.html" class="catalogo">Catálogo</a>
+    <a href="index.html">Voltar</a>
     <a href="contato.html">Contato</a>
   </nav>
 </header>
@@ -103,9 +111,20 @@
   <div class="contact-container">
     <h1>Entre em Contato</h1>
     <div class="contact-info">
-      <p><strong>Endereço:</strong> Rua dos Livros, 123 – Centro, São Paulo – SP</p>
-      <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+      <p><strong>Endereço:</strong> Rua Quirino dos Santos, 410 - Barra Funda, São Paulo - SP, 01141-020</p>
+      <p><strong>WhatsApp:</strong> (21) 97226-3199</p>
       <p><strong>E-mail:</strong> atendimento@saraivalivros.com</p>
+    </div>
+    <div class="mapa">
+      <iframe
+      src="https://www.google.com/maps/place/Rua+Quirino+dos+Santos,+410+-+Barra+Funda,+São+Paulo+-+SP,+01141-020/@-23.5209431,-46.6666679,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce580717452487:0x4adbc8d21b0d4818!8m2!3d-23.520948!4d-46.664093!16s%2Fg%2F11q2nbp26m?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </main>
