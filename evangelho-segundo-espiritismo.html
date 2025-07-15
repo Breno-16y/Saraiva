@@ -13,15 +13,15 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f3e5f5;
-      color: #4a148c;
+      background-color: #e8f5e9;
+      color: #1b5e20;
       padding: 20px;
     }
 
     .logo-title {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #6a1b9a;
+      color: #2e7d32;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -35,7 +35,7 @@
       background: #fff;
       border-radius: 12px;
       padding: 25px;
-      box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
+      box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
     }
 
     .product-image {
@@ -44,8 +44,10 @@
     }
 
     .product-image img {
-      max-width: 100%;
-      height: auto;
+      width: 100%;
+      max-width: 300px;
+      height: 450px;
+      object-fit: cover;
       border-radius: 10px;
       background-color: #f8f8f8;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -56,21 +58,22 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      color: #1b5e20;
     }
 
     h1 {
       font-size: 1.9rem;
-      color: #4a148c;
+      color: #1b5e20;
     }
 
     .author {
-      color: #7b1fa2;
       font-size: 1rem;
+      color: #388e3c;
     }
 
     .price {
       font-size: 1.6rem;
-      color: #b12704;
+      color: #2e7d32;
       font-weight: bold;
     }
 
@@ -97,27 +100,26 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s ease;
-      text-align: center;
     }
 
     .buy-button {
-      background-color: #ffd740;
-      color: #4a148c;
+      background-color: #81c784;
+      color: white;
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
 
     .buy-button:hover {
-      background-color: #ffca28;
+      background-color: #66bb6a;
     }
 
     .cart-button {
-      background-color: #e1bee7;
-      color: #4a148c;
+      background-color: #c8e6c9;
+      color: #1b5e20;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .cart-button:hover {
-      background-color: #ce93d8;
+      background-color: #a5d6a7;
     }
 
     .back-link {
@@ -127,19 +129,19 @@
 
     .back-link a {
       text-decoration: underline;
-      color: #6a1b9a;
+      color: #2e7d32;
       font-weight: 600;
     }
 
     .back-link a:hover {
-      color: #8e24aa;
+      color: #43a047;
     }
 
     footer {
       margin-top: 40px;
       text-align: center;
       font-size: 0.9rem;
-      color: #6a1b9a;
+      color: #2e7d32;
     }
 
     @media (max-width: 768px) {
@@ -161,6 +163,7 @@
       .buy-button,
       .cart-button {
         width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -191,12 +194,12 @@
   </div>
 
   <div class="back-link">
-    <a href="espiritualidade.html">← Voltar a Espiritualidade</a>
+    <a href="espiritualidade.html">← Voltar à Espiritualidade</a>
   </div>
 
   <footer>
     © 2025 Saraiva. Todos os direitos reservados.
   </footer>
-  
+
 </body>
 </html>
