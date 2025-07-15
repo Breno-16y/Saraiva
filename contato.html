@@ -20,8 +20,16 @@
       text-align: center;
     }
 
+    .logo-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
     .logo-title .livraria {
-      font-family: 'TT Drugs',
+      font-family: 'TT Drugs', sans-serif;
       font-size: 3rem;
       color: #EE4266;
       font-weight: bold;
@@ -31,7 +39,7 @@
 
     .logo-title .saraiva {
       font-family: 'Sunday', cursive;
-      font-size: 2.3rem;
+      font-size: 2rem;
       color: #FFD23F;
       font-weight: bold;
       letter-spacing: 1px;
@@ -44,6 +52,7 @@
       justify-content: center;
       gap: 1.5rem;
     }
+
     nav.menu a {
       color: white;
       text-decoration: none;
@@ -51,13 +60,21 @@
       font-size: 1.1rem;
       transition: color .3s;
     }
-    nav.menu a:hover { color: #ffc107; }
+
+    nav.menu a:hover {
+      color: #ffc107;
+    }
+
     nav.menu .catalogo {
       border: 2px solid white;
       border-radius: 999px;
       padding: 0.4rem 1rem;
     }
-    nav.menu .catalogo:hover { border-color: #ffc107; color: #ffc107; }
+
+    nav.menu .catalogo:hover {
+      border-color: #ffc107;
+      color: #ffc107;
+    }
 
     .contact-container {
       max-width: 800px;
@@ -79,6 +96,7 @@
       line-height: 2;
       padding: 1rem;
     }
+
     .contact-info strong {
       color: #6a1b9a;
     }
@@ -104,6 +122,7 @@
         margin: 2rem 1rem;
         padding: 1.5rem;
       }
+
       nav.menu {
         flex-wrap: wrap;
       }
@@ -151,3 +170,4 @@
 
 </body>
 </html>
+
